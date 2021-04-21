@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>NDVR Financial App</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="script.js" type="text/javascript"></script>
+        <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="header"></div>
+            <div class="content-wrapper">
+                <div class="left">
+                    <div class="input-content">
+                        <h3>Enter Ticker Symbol</h3>
+                        <div class="inputForm">
+                            <input id="symbolInput" placeholder="TICKER"></input>
+                            <button id="submit" class="button" onclick="checkTicker()"><span class="material-icons md-dark">arrow_forward</span></button>
+                        </div>
+                    </div>
+
+                    <div class="ticker-content" id="ticker-content">
+                        <div id="error-code"></div>
+                        <div class="main-stock-content">
+                            <div id="ticker-symbol"></div>
+                            <div id="ticker-name"></div>
+                            <div id="ticker-price"></div>
+                        </div>
+                        <div class="daily-stock-stats">
+                            <div class="ticker-data">
+                                <div class="stats-text">Previous close: </div>
+                                <span id="ticker-prev-close"></span> 
+                            </div>
+                            <div class="ticker-data">
+                                <div class="stats-text">Today's open:</div>
+                                <span id="ticker-open"></span>
+                            </div>
+                            <div class="ticker-data">
+                                <div class="stats-text">Today's high:</div>
+                                <span id="ticker-high"></span>
+                            </div>
+                            <div class="ticker-data">
+                                <div class="stats-text">Today's low:</div>
+                                <span id="ticker-low"></span>
+                            </div>
+                        </div>
+                        <div id="similar-companies"></div>
+                        <div class="peer-wrap">
+                            <span class="peer" id="peer1"></span>
+                            <span class="peer" id="peer2"></span>
+                            <span class="peer" id="peer3"></span>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="right">
+                    <div id="chart"></div>
+                    <button id="switch-chart" class="button" onclick="candleGraph()"></button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

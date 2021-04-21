@@ -1,0 +1,182 @@
+* {
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+html, body, .container {
+    height: 100%;
+}
+
+.button {
+    border-radius: 12px;
+    border: 2px solid gray;
+    height: 44px;
+}
+
+.header {
+    height: 100px;
+    width: 100%;
+    background-color: #007FB4;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.left {
+    width: 50%;
+    border-right: 1px solid gray;
+    padding: 20px 0 0 20px;
+}
+
+.right {
+    width: 50%;
+    text-align: center;
+}
+
+.inputForm {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+#symbolInput {
+    height: 40px;
+    flex: 1 0 auto;
+    border-radius: 12px;
+    border: 2px solid gray;
+    padding: 0 0 0 20px;
+    margin-right: 20px;
+    font-size: 16px;
+}
+
+#symbolInput:focus {
+    border: 2px solid #007FB4;
+}
+
+#submit {
+    width: 44px;   
+    margin-right: 20px;
+}
+
+#submit:focus, .material-icons:focus {
+    color: #007FB4;
+    border: 2px solid #007FB4;
+}
+
+.ticker-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+#error-code {
+    width: 100%;
+    color: red; 
+    margin-bottom: 20px;
+}
+
+.main-stock-content {
+    width: 40%;
+    margin-right: 5%;
+}
+
+.daily-stock-stats {
+    width: 55%;
+}
+
+.stats-text {
+    display: none;
+    width: 130px;
+}
+
+#ticker-symbol {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#ticker-name {
+    font-size: 24px;
+    text-transform: capitalize;
+    padding-bottom: 10px;
+}
+
+#ticker-price {
+    font-size: 22px;
+}
+
+#ticker-price, #ticker-prev-close, #ticker-open, #ticker-high, #ticker-low {
+    color: green;
+}
+
+.ticker-data, #similar-companies, #ticker-symbol {
+    padding-bottom: 4px;
+}
+
+#similar-companies {
+    font-size: 18px;
+    margin-top: 50px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.peer-wrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.peer {
+    margin-right: 20px;
+    color: #007FB4;
+    font-weight: bold;
+}
+
+#chart {
+    width: 600px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+#switch-chart {
+    display: none;
+    padding: 10px;
+    margin-top: 20px;
+    font-size: 16px;
+}
+
+/* adjust display for phones */
+@media screen and (max-width: 600px) {
+    .header {
+        height: 60px;
+    }
+
+    .content-wrapper, .ticker-content {
+        flex-direction: column;
+    }
+
+    .left, .right, .main-stock-content {
+        width: 100%;
+        border: none;
+    }
+
+    #symbolInput {
+        width: auto;
+    }
+
+    .inputForm {
+        margin-right: 20px;
+    }
+
+    .daily-stock-stats, #similar-companies {
+        margin-top: 25px;
+    }
+
+    #chart {
+        width: 400px;
+        height: 400px;
+        margin: 0px;
+    }
+}
+
